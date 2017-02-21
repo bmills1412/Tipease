@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TipView">
+
+        <attr name="thumbSize" format="integer|reference|float"/>
+        <attr name="thumbStrokeSize" format="integer|reference|float"/>
+        <attr name="thumbTouchColor" format="color|integer|string"/>
+        <attr name="thumbTextSize" format="reference|float|integer|dimension"/>
+        <attr name="thumbTextColor" format="color|reference|integer|string"/>
+        <attr name="thumbStrokeColor" format="color|reference|integer|string"/>
+
+
+        <attr name="trackSize" format="integer|reference|float"/>
+        <attr name="trackColor" format="color|reference|integer|string"/>
+        <attr name="trackTextSize" format="integer|reference|float"/>
+        <attr name="trackTextColor" format="color|reference|integer|string"/>
+
+
+
+        <attr name="trackStrokeSize" format="integer|reference|float"/>
+        <attr name="trackStrokeColor" format="color|reference|integer|string"/>
+
+
+
+        <attr name="tipColor" format="color|integer|string"/>
+        <attr name="taxColor" format="color|integer|string"/>
+        <attr name="splitColor" format="color|integer|string"/>
+
+
+
+        <attr name="tickmarkColor" format="color|integer|string"/>
+        <attr name="tickmarkSize" format="integer|reference|float"/>
+
+
+
+        <attr name="tipText" format="string|reference"/>
+        <attr name="taxText" format="string|reference"/>
+        <attr name="splitText" format="string|reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="TipViewStyle" format="reference"/>
+    </declare-styleable>
+
+</resources>

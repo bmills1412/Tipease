@@ -1,0 +1,90 @@
+<resources >
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        xmlns:tools="http://schemas.android.com/tools"
+
+        <item name="windowNoTitle">true</item>
+
+        <item name="TipViewStyle">@style/WidgetTipViewStyle</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="WidgetTipViewStyle">
+        <item name="thumbSize">@dimen/thumbSize</item>
+        <item name="thumbStrokeSize">@dimen/thumbStrokeSize</item>
+        <item name="thumbStrokeColor">@color/goldColor</item>
+        <item name="thumbTouchColor">@color/thumbTouchFill</item>
+        <item name="trackSize">@dimen/trackSize</item>
+        <item name="trackStrokeSize">@dimen/strokeWidth</item>
+        <item name="tipColor">@color/tipFill</item>
+        <item name="taxColor">@color/taxFill</item>
+        <item name="splitColor">@color/splitFill</item>
+        <item name="tickmarkColor">@color/tipViewCardBackground</item>
+        <item name="tickmarkSize">@dimen/tickmarkSize</item>
+        <item name="tipText">@string/tipText</item>
+        <item name="taxText">@string/taxText</item>
+        <item name="splitText">@string/splitText</item>
+        <item name="thumbTextSize">@dimen/thumbTextSize</item>
+        <item name="trackTextSize">@dimen/trackTextSize</item>
+
+
+
+        <item name="trackColor">@color/trackFill</item>
+        <item name="trackStrokeColor">@color/trackStrokeFill</item>
+        <item name="thumbTextColor">@color/thumbTextFill</item>
+        <item name="trackTextColor">@color/whiteColor</item>
+
+
+        <item name="android:layout_marginTop">@dimen/tipViewMarginVertical</item>
+        <item name="android:padding">@dimen/tipViewPadding</item>
+        <item name="android:layout_centerHorizontal">true</item>
+
+
+    </style>
+
+
+
+    <style name="PricesNameStyle">
+        <item name="android:textColor">@color/textFill</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/pricesNameTextSize</item>
+    </style>
+
+
+    <style name="YouPayTextStyle" parent="PricesNameStyle">
+        <item name="android:textSize">@dimen/youPayTextSize</item>
+        <item name="android:textColor">@color/youPayTotalColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/youPay</item>
+    </style>
+
+
+    <style name="PricesTotalStyle">
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:gravity">end|right</item>
+        <item name="android:textSize">@dimen/pricesTotalTextSize</item>
+        <item name="android:textColor">@color/textFill</item>
+        <item name="android:text">@string/pricesDefault</item>
+    </style>
+
+
+    <style name="YouPayTotalStyle" parent="PricesTotalStyle">
+        <item name="android:textSize">@dimen/youPayTotalTextSize</item>
+        <item name="android:textColor">@color/youPayTotalColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="BreakerBarContent">
+
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_below">@id/tipView</item>
+    </style>
+
+
+</resources>

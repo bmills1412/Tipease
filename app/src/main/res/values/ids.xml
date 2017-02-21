@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item type="id" name="tipView"/>
+
+    <item type="id" name="tipViewCardLayoutContainer"/>
+
+    <item type="id" name="pricesTotalContainer"/>
+
+    <item type="id" name="tipTotal" />
+    <item type="id" name="taxTotal" />
+    <item type="id" name="splitTotal" />
+    <item type="id" name="productTotal" />
+    
+    <item type="id" name="youPayTotal" />
+    <item type="id" name="youPayEachPay"/>
+    
+    <item type="id" name="productDialogLauncher"/>
+    <item type="id" name="dataToggle"/>
+
+
+    <item type="id" name="productEditText"/>
+    
+    <item type="id" name="fabBreakerContainer"/>
+
+    <item type="id" name="productWindowTextInput"/>
+
+    <item type="id" name="forkKnifeButtonContainer"/>
+
+
+</resources>

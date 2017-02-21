@@ -1,0 +1,33 @@
+<resources >
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tipViewMarginVertical">10dp</dimen>
+    <dimen name="tipViewPadding">10dp</dimen>
+
+
+    <dimen name="gridPaddingHorizontal">22dp</dimen>
+    <dimen name="gridPaddingVertical">22dp</dimen>
+
+
+    <!--These are for the base dimensional DP of phones which is 320 width / 480 width -->
+    <dimen name="thumbSize">48dp</dimen>
+    <dimen name="thumbStrokeSize">4dp</dimen>
+    <dimen name="strokeWidth">12dp</dimen>
+    <dimen name="trackSize">200dp</dimen>
+    <dimen name="tickmarkSize">4dp</dimen>
+    <dimen name="trackTextSize">@dimen/pricesNameTextSize</dimen>
+
+    <dimen name="thumbTextSize">16sp</dimen>
+
+    <dimen name="pricesNameTextSize">28dp</dimen>
+    <dimen name="youPayTextSize">16dp</dimen>
+    <dimen name="pricesTotalTextSize">22dp</dimen>
+    <dimen name="youPayTotalTextSize">34dp</dimen>
+
+
+    <dimen name="productTotalWindowPadding">22dp</dimen>
+
+
+
+
+
+</resources>

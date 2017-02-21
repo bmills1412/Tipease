@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccent">#5e3d7c</color>
+
+    <color name="gridBackground">#b8c3c7</color>
+
+    <color name="tipViewCardBackground">#34495e</color>
+
+
+    <color name="trackFill">#2c3e50</color>
+
+    <color name ="trackStrokeFill">@color/whiteColor</color>
+
+    <color name="tickMarkFill">@color/tipViewCardBackground</color>
+
+
+    <color name="tipFill">@color/whiteColor</color>
+    <color name="splitFill">@color/whiteColor</color>
+    <color name ="taxFill">@color/whiteColor</color>
+
+    <color name="thumbTouchFill">#8e8e8e</color>
+
+    <color name="thumbTextFill">@color/tipViewCardBackground</color>
+
+    <color name="textFill">@color/whiteColor</color>
+    <color name="youPayTotalColor">@color/trackFill</color>
+
+
+    <color name="fabFill">@color/trackStrokeFill</color>
+
+
+    <color name="goldColor">#d4aa00</color>
+    <color name="whiteColor">#ffffff</color>
+
+
+    <color name="scrim">#80000000</color>
+
+
+    <color name="fabBackgroundFill">#ff5fbcd3</color>
+
+
+
+
+
+
+
+
+
+</resources>
