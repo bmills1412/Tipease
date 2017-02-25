@@ -57,12 +57,6 @@ public class TipView extends View implements Drawable.Callback {
 
 
 
-    //#THUMB POS#\\
-    private float tipPos = -1.0f;
-    private float taxPos = -1.0f;
-    private float splitPos = -1.0f;
-
-
     //# TICK MARK VALUES #\\
     private Paint tickPaint;
     private float tickSize;
