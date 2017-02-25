@@ -12,8 +12,6 @@ public class BillInformation implements Parcelable{
 
     private static NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
-    private static final double DEFAULT_TOTAL = 0.0d;
-
     private int currentTip = 0;
     private int currentTax = 0;
     private int currentSplit = 0;
@@ -43,7 +41,7 @@ public class BillInformation implements Parcelable{
      *
      */
     public BillInformation(Parcel in){
-        setOriginalProductBill(Double.parseDouble(in.readString()));
+        setOriginalProductBill(in.readString());
 
         setCurrentTip(toInt(in.readString()));
         setCurrentTax(toInt(in.readString()));
@@ -124,9 +122,9 @@ public class BillInformation implements Parcelable{
     }
 
 
-    public void setOriginalProductBill(double originalProductBill) {
+    public void setOriginalProductBill(String originalProductBill) {
 
-        this.originalProductBill = originalProductBill;
+        this.originalProductBill = Double.parseDouble(originalProductBill);
 
         if(hasProductTotal)
             resetValues();

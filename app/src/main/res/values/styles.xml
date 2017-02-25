@@ -4,7 +4,8 @@
         xmlns:tools="http://schemas.android.com/tools"
 
         <item name="windowNoTitle">true</item>
-
+        
+        
         <item name="TipViewStyle">@style/WidgetTipViewStyle</item>
         <item name="AngleTextLayoutStyle">@style/WidgetAngleTextLayoutStyle</item>
 

@@ -86,7 +86,7 @@ public class MainScreen extends AppCompatActivity implements TipViewControllerCl
 
     @Override
     public void productBillChanged(String newTotal) {
-        information.setOriginalProductBill(Double.parseDouble(newTotal));
+        information.setOriginalProductBill(newTotal);
         currentPricesDataBase.onBillingInfoChanged();
     }
 
