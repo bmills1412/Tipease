@@ -41,6 +41,27 @@
 
     <declare-styleable name="CustomTheme">
         <attr name="TipViewStyle" format="reference"/>
+        <attr name="AngleTextLayoutStyle" format="reference"/>
     </declare-styleable>
+
+
+    <declare-styleable name="AngleTextLayout">
+
+        <attr name="standardTextColor" format="color|integer|string"/>
+        <attr name="specialTextColor" format="color|integer|string"/>
+
+        <attr name="titleTextSize" format="integer|float|reference"/>
+        <attr name="descriptionTextSize" format="integer|float|reference"/>
+        <attr name="primaryValueTextSize" format="integer|float|reference"/>
+        <attr name="secondaryValueTextSize" format="integer|float|reference"/>
+
+        <attr name="titleText" format="reference|string"/>
+        <attr name="descriptionText" format="reference|string"/>
+        <attr name="primaryValueText" format="reference|string"/>
+        <attr name="secondaryValueText" format="reference|string"/>
+
+        <attr name="textPadding" format="integer|reference|float"/>
+    </declare-styleable>
+
 
 </resources>

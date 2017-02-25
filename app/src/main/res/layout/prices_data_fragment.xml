@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:background="@color/gridBackground"
     xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:background="@color/pricesDataBackground"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
@@ -67,6 +68,8 @@
 
 <TextView
     style="@style/PricesTotalStyle"
+
+    android:text="@string/pricesSplitDefault"
     android:id="@id/splitTotal"
 
     android:layout_row="2"

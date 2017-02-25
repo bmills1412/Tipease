@@ -3,16 +3,16 @@
 
     <color name="colorAccent">#5e3d7c</color>
 
-    <color name="gridBackground">#b8c3c7</color>
+    <color name="pricesDataBackground">#b8c3c7</color>
 
-    <color name="tipViewCardBackground">#34495e</color>
+    <color name="tipViewControllerBackground">#34495e</color>
 
 
     <color name="trackFill">#2c3e50</color>
 
     <color name ="trackStrokeFill">@color/whiteColor</color>
 
-    <color name="tickMarkFill">@color/tipViewCardBackground</color>
+    <color name="tickMarkFill">@color/tipViewControllerBackground</color>
 
 
     <color name="tipFill">@color/whiteColor</color>
@@ -21,7 +21,7 @@
 
     <color name="thumbTouchFill">#8e8e8e</color>
 
-    <color name="thumbTextFill">@color/tipViewCardBackground</color>
+    <color name="thumbTextFill">@color/tipViewControllerBackground</color>
 
     <color name="textFill">@color/whiteColor</color>
     <color name="youPayTotalColor">@color/trackFill</color>

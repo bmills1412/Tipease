@@ -1,11 +1,10 @@
-package com.example.bryan.tipease;
+package com.example.bryan.tipease.MainControllers;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.IBinder;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -14,10 +13,11 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.example.bryan.tipease.CustomViews.ProductTotalEditText;
+import com.example.bryan.tipease.R;
 
 
 public class ProductTotalWindow implements PopupWindow.OnDismissListener,

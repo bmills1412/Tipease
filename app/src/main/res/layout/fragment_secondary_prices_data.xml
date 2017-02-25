@@ -1,0 +1,54 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/tipViewControllerBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context="com.example.bryan.tipease.BillingDataPackage.SecondaryPricesDataFragment">
+
+
+ <LinearLayout
+    android:id="@id/angleLayoutContainer"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<com.example.bryan.tipease.CustomViews.AngleTextLayout
+    style="@style/WidgetAngleTextLayoutStyle"
+
+    app:titleText="@string/tipText"
+
+    android:id="@id/angleLayoutTip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+<com.example.bryan.tipease.CustomViews.AngleTextLayout
+    style="@style/WidgetAngleTextLayoutStyle"
+
+    app:titleText="@string/taxText"
+
+    android:id="@id/angleLayoutTax"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+<com.example.bryan.tipease.CustomViews.AngleTextLayout
+    style="@style/WidgetAngleTextLayoutStyleSplit"
+
+    app:titleText="@string/splitText"
+    app:descriptionText="@string/descriptionTextSplit"
+
+    android:id="@id/angleLayoutSplit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+</ScrollView>

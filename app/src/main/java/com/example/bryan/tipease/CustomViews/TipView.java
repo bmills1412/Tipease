@@ -1,4 +1,4 @@
-package com.example.bryan.tipease;
+package com.example.bryan.tipease.CustomViews;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -9,16 +9,15 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-
-//TODO: Write logic for drawing text in the track, and updating it as the position changes
-//TODO: Write logic for drawing text in the thumbs
+import com.example.bryan.tipease.CustomViews.ThumbDrawableBase;
+import com.example.bryan.tipease.CustomViews.Track;
+import com.example.bryan.tipease.R;
 
 
 
@@ -314,7 +313,6 @@ public class TipView extends View implements Drawable.Callback {
 
 
     private void initBounds(){
-        Log.i("Test", "Setting bounds");
         int trackBounds = (int)(trackSize+(trackStrokeSize*2));
 
         this.trackDrawable.setBounds(getPaddingLeft()+(int)(thumbSize/2), getPaddingTop()+(int)thumbSize/2, trackBounds, trackBounds);
@@ -363,11 +361,9 @@ public class TipView extends View implements Drawable.Callback {
         tipDrawable.draw(canvas);
         taxDrawable.draw(canvas);
         splitDrawable.draw(canvas);
-        Log.i("Test", "Drawing");
     }
 
     private void drawTicks(Canvas c){
-        Log.i("Test", "DRAWING TICKS");
         final float tickLengthStart = trackSize*0.5f;
         final float tickLengthEnd = tickLengthStart+trackStrokeSize;
 
@@ -386,9 +382,6 @@ public class TipView extends View implements Drawable.Callback {
 
     //Switch from String concatenation to a NumberFormat for easier use
     private void drawCurrentValue(Canvas canvas){
-
-        Log.i("Test", "DRAWING CURRENT NUMBER");
-
         String value ="";
         float xPos, yPos;
 

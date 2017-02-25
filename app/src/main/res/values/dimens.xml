@@ -7,6 +7,8 @@
     <dimen name="gridPaddingHorizontal">22dp</dimen>
     <dimen name="gridPaddingVertical">22dp</dimen>
 
+    <dimen name="secondaryPricesDataPadding">6dp</dimen>
+
 
     <!--These are for the base dimensional DP of phones which is 320 width / 480 width -->
     <dimen name="thumbSize">48dp</dimen>
@@ -27,7 +29,14 @@
     <dimen name="productTotalWindowPadding">22dp</dimen>
 
 
+    <dimen name="titleTextSize">22dp</dimen>
+    <dimen name="descriptionTextSize">12dp</dimen>
+    <dimen name="secondaryValueTextSize">22dp</dimen>
+    <dimen name="primaryValueTextSize">22dp</dimen>
+
+    <dimen name="textPadding">6dp</dimen>
 
 
+    <dimen name="toggle_compound_padding">6dp</dimen>
 
 </resources>

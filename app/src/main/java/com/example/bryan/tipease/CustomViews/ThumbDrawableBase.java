@@ -1,4 +1,4 @@
-package com.example.bryan.tipease;
+package com.example.bryan.tipease.CustomViews;
 
 import android.graphics.drawable.Drawable;
 

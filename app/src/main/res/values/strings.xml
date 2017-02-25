@@ -7,6 +7,7 @@
 
     <string name="productName">Product</string>
     <string name="pricesDefault">$0.00</string>
+    <string name="pricesSplitDefault">0</string>
 
     <string name="youPay">You Pay</string>
     <string name="eachPay">Each Pay</string>
@@ -19,5 +20,15 @@
 
     <string name="contentDescForkKnifeImage">Opens A Dialog To Set Your Bill Total</string>
     <string name="contentDescDataToggleImage">Will Switch Your Data Below To Meta Data</string>
+
+
+    <string name="descriptionText">(Per Person)</string>
+    <string name="descriptionTextSplit">(Base Per Person)</string>
+
+    <string name="secondaryValueText">0%</string>
+    <string name="secondaryValueTextSplit">0</string>
+    <string name="primaryValueText">$0</string>
+
+
 
 </resources>

@@ -3,9 +3,9 @@
 
     <item type="id" name="tipView"/>
 
-    <item type="id" name="tipViewCardLayoutContainer"/>
+    <item type="id" name="tipViewControllerContainer"/>
 
-    <item type="id" name="pricesTotalContainer"/>
+    <item type="id" name="pricesDataContainer"/>
 
     <item type="id" name="tipTotal" />
     <item type="id" name="taxTotal" />
@@ -26,6 +26,14 @@
     <item type="id" name="productWindowTextInput"/>
 
     <item type="id" name="forkKnifeButtonContainer"/>
+
+    <item type="id" name="cardViewId"/>
+    
+    <item type="id" name="angleLayoutContainer"/>
+
+    <item type="id" name="angleLayoutTip"/>
+    <item type="id" name="angleLayoutTax"/>
+    <item type="id" name="angleLayoutSplit"/>
 
 
 </resources>

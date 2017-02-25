@@ -6,6 +6,7 @@
         <item name="windowNoTitle">true</item>
 
         <item name="TipViewStyle">@style/WidgetTipViewStyle</item>
+        <item name="AngleTextLayoutStyle">@style/WidgetAngleTextLayoutStyle</item>
 
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -22,7 +23,7 @@
         <item name="tipColor">@color/tipFill</item>
         <item name="taxColor">@color/taxFill</item>
         <item name="splitColor">@color/splitFill</item>
-        <item name="tickmarkColor">@color/tipViewCardBackground</item>
+        <item name="tickmarkColor">@color/tipViewControllerBackground</item>
         <item name="tickmarkSize">@dimen/tickmarkSize</item>
         <item name="tipText">@string/tipText</item>
         <item name="taxText">@string/taxText</item>
@@ -44,6 +45,36 @@
 
 
     </style>
+
+
+
+
+
+    <style name="WidgetAngleTextLayoutStyle">
+        <item name="android:padding">@dimen/secondaryPricesDataPadding</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+
+        <item name="textPadding">@dimen/textPadding</item>
+        <item name="standardTextColor">@color/whiteColor</item>
+        <item name="specialTextColor">@color/goldColor</item>
+        <item name="descriptionText">@string/descriptionText</item>
+        <item name="secondaryValueText">@string/secondaryValueText</item>
+        <item name="primaryValueText">@string/primaryValueText</item>
+        <item name="titleTextSize">@dimen/titleTextSize</item>
+        <item name="descriptionTextSize">@dimen/descriptionTextSize</item>
+        <item name="secondaryValueTextSize">@dimen/secondaryValueTextSize</item>
+        <item name="primaryValueTextSize">@dimen/primaryValueTextSize</item>
+    </style>
+
+    <style name="WidgetAngleTextLayoutStyleSplit" parent="WidgetAngleTextLayoutStyle">
+        <item name="descriptionText">@string/descriptionTextSplit</item>
+        <item name="secondaryValueText">@string/secondaryValueTextSplit</item>
+    </style>
+
+
+
 
 
 

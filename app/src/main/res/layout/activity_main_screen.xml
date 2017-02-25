@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main_screen"
+
+    android:orientation="vertical"
+    android:weightSum="10"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bryan.tipease.MainScreen">
+    tools:context="com.example.bryan.tipease.MainControllers.MainScreen">
 
 
-    <FrameLayout
-    android:layout_alignParentBottom="true"
-    android:layout_below="@id/tipViewCardLayoutContainer"
-    android:id="@id/pricesTotalContainer"
 
+<FrameLayout
+    android:id="@id/tipViewControllerContainer"
+
+    android:layout_weight="6"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="0dp"/>
 
 
-<include layout="@layout/prices_layout" />
 
-</FrameLayout>
+<FrameLayout
+    android:id="@id/pricesDataContainer"
 
-    <include
-        layout="@layout/tipview_card_container"
-        android:id="@id/tipViewCardLayoutContainer" />
+    android:layout_weight="4"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"/>
 
 
-</RelativeLayout>
+
+
+
+
+</LinearLayout>
