@@ -1,12 +1,10 @@
 package com.example.bryan.tipease.CustomViews;
 
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 
 /**
  * Draw the drop shadow here. Thanks, boo :)
@@ -14,24 +12,16 @@ import android.util.Log;
 
  class Track extends Drawable {
 
-
-
     private float radius;
-
-    private float trackSize, stroke;
 
     private Paint strokePaint, trackPaint;
 
 
+     Track(float trackSize ,float strokeSize, int circleColor, int strokeColor){
+         this.radius = trackSize*0.5f;
 
-
-     Track(float trackSize,float strokeSize, int circleColor, int strokeColor){
-        this.trackSize = trackSize;
-        this.radius = trackSize*0.5f;
-        this.stroke = strokeSize;
-
-        trackPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        trackPaint.setColor(circleColor);
+         trackPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+         trackPaint.setColor(circleColor);
 
         strokePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         strokePaint.setStyle(Paint.Style.STROKE);
@@ -43,10 +33,6 @@ import android.util.Log;
 
 
     }
-
-
-
-
 
     @Override
     public void draw(Canvas canvas) {
@@ -63,9 +49,6 @@ import android.util.Log;
 
 
 
-
-
-
     @Override
     public void setAlpha(int alpha) {
 
@@ -78,11 +61,6 @@ import android.util.Log;
     public int getOpacity() {
         return PixelFormat.OPAQUE;
     }
-
-
-
-
-
 
 
 

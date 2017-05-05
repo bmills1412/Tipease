@@ -23,7 +23,7 @@ import com.example.bryan.tipease.R;
 
 //TODO: Write logic for anything else (state saving/ accessibility events/ closing any resources onDetatchFromWindow/  etc)
 //TODO: Tidy up the code, refractor, etc
-
+//TODO: Remove trackSize refernces from code since its superfluous
 public class TipView extends View implements Drawable.Callback {
 
 
@@ -90,7 +90,7 @@ public class TipView extends View implements Drawable.Callback {
 
     //#THUMB DRAWABLE AND VALUES#\\
     private float thumbSize; //used internally to tell the drawable its bounds
-
+    private float thumbStrokeSize;
 
     private float tipFloor, taxFloor, splitFloor;
     private float thumbOffset;
@@ -160,7 +160,6 @@ public class TipView extends View implements Drawable.Callback {
         int splitColor = 0;
         int thumbTouchColor = 0;
         int thumbTextColor = 0;
-        int thumbStrokeSize = 0;
         int thumbStrokeColor = 0;
 
         int trackColor = 0;
@@ -187,7 +186,7 @@ public class TipView extends View implements Drawable.Callback {
                     break;
 
                 case R.styleable.TipView_thumbStrokeSize:
-                    thumbStrokeSize = resArray.getDimensionPixelSize(attr, 5);
+                    this.thumbStrokeSize = resArray.getDimensionPixelSize(attr, 5);
                     break;
 
                 case R.styleable.TipView_thumbStrokeColor:
@@ -309,7 +308,11 @@ public class TipView extends View implements Drawable.Callback {
     private void initBounds(){
         int trackBounds = (int)(trackSize+(trackStrokeSize*2));
 
-        this.trackDrawable.setBounds(getPaddingLeft()+(int)(thumbSize/2), getPaddingTop()+(int)thumbSize/2, trackBounds, trackBounds);
+        this.trackDrawable.setBounds(getPaddingLeft()+(int)(thumbSize/2)+(int)(thumbStrokeSize*4),
+                /*thumbStrokeSize*4 (*4) is an abitrary number but it solved the tax thumbs stroke being clipped */
+                getPaddingTop()+(int)thumbSize/2,
+                trackBounds,
+                trackBounds);
 
 
         this.drawStartPosX = trackDrawable.getBounds().centerX();
@@ -406,23 +409,13 @@ public class TipView extends View implements Drawable.Callback {
 
 
 
-
-    @Override
-    public void onLayout(boolean changed, int left, int top, int right, int bottom){
-        super.onLayout(changed, left, top, right, bottom);
-    }
-
-
-
-
-
     @Override
     public void onMeasure(int wSpec, int hSpec){
         super.onMeasure(wSpec, hSpec);
         int width, height, widthMode, heightMode;
 
         int sizeW = 0;
-        int sizeH;
+        int sizeH = 0;
 
         width = MeasureSpec.getSize(wSpec);
         height = MeasureSpec.getSize(hSpec);
@@ -440,10 +433,9 @@ public class TipView extends View implements Drawable.Callback {
         if(heightMode == MeasureSpec.EXACTLY){
             sizeH = height;
         } else {
-            sizeW = (int) (trackSize + (trackStrokeSize*2) + paddingHor + thumbPad);
+            sizeW = (int) (trackSize + (trackStrokeSize*2) + paddingHor + thumbPad+thumbStrokeSize*2);
 
-            sizeH = (int) (trackSize + (trackStrokeSize*2) + paddingVer + thumbPad);
-
+            sizeH = (int) (trackSize + (trackStrokeSize*2) + paddingVer + thumbPad+thumbStrokeSize*2);
         }
 
         setMeasuredDimension(sizeW, sizeH);

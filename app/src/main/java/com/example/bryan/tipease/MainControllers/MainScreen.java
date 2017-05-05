@@ -1,5 +1,8 @@
 package com.example.bryan.tipease.MainControllers;
 
+import android.support.annotation.NonNull;
+import android.support.transition.Transition;
+import android.support.transition.TransitionValues;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,15 +23,12 @@ public class MainScreen extends AppCompatActivity implements TipViewControllerCl
 
     private TipViewController tipViewController;
 
-
     private PricesDataBase currentPricesDataBase;
 
     private PricesDataBase mainPricesData;
     private PricesDataBase secondaryPricesData;
 
     private BillInformation information;
-
-
 
 
     @Override
@@ -40,7 +40,6 @@ public class MainScreen extends AppCompatActivity implements TipViewControllerCl
         if(information==null) information = new BillInformation();
 
        FragmentTransaction fragTrans = getSupportFragmentManager().beginTransaction();
-
 
 
         tipViewController = TipViewController.newInstance();
@@ -92,8 +91,6 @@ public class MainScreen extends AppCompatActivity implements TipViewControllerCl
 
 
 
-
-
     @Override
     public void onToggleClicked(boolean checked) {
         if(checked){
@@ -109,6 +106,9 @@ public class MainScreen extends AppCompatActivity implements TipViewControllerCl
                     .replace(R.id.pricesDataContainer, mainPricesData, currentPricesDataBase.getFragmentTag())
                     .commit();
         }
+
+
+
     }
 
 
