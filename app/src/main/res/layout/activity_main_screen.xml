@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/activity_main_screen"
 
-    android:orientation="vertical"
-    android:weightSum="10"
+    android:background="@color/pricesDataBackground"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,21 +13,24 @@
 
 
 
-<FrameLayout
-    android:id="@id/tipViewControllerContainer"
+    <android.support.v7.widget.CardView
+        android:id="@id/tipViewControllerContainer"
+        android:background="@color/tipViewControllerBackground"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-    android:layout_weight="6"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"/>
+        app:cardElevation="8dp" />
+
 
 
 
 <FrameLayout
     android:id="@id/pricesDataContainer"
-
-    android:layout_weight="4"
+    android:layout_below="@id/tipViewControllerContainer"
+    android:layout_alignParentBottom="true"
     android:layout_width="match_parent"
-    android:layout_height="0dp"/>
+    android:layout_height="wrap_content"/>
 
 
-</LinearLayout>
+</RelativeLayout>

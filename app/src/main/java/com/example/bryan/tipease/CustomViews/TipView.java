@@ -15,8 +15,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.example.bryan.tipease.CustomViews.ThumbDrawableBase;
-import com.example.bryan.tipease.CustomViews.Track;
 import com.example.bryan.tipease.R;
 
 
@@ -150,7 +148,6 @@ public class TipView extends View implements Drawable.Callback {
 
 
         initThumbPos();
-        initBounds();
     }
 
     private void initResources(TypedArray resArray){
@@ -282,6 +279,7 @@ public class TipView extends View implements Drawable.Callback {
 
     }
 
+    //Initializes the perimeter of the track, each thumb is allowed to move within.
     private void initThumbPos(){
 
         this.thumbOffset = (float)Math.atan2( thumbSize*0.5f, trackSize*0.5f + trackStrokeSize*0.5f);
@@ -305,19 +303,28 @@ public class TipView extends View implements Drawable.Callback {
     }
 
 
-    private void initBounds(){
-        int trackBounds = (int)(trackSize+(trackStrokeSize*2));
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        initBounds(w, h);
+    }
 
-        this.trackDrawable.setBounds(getPaddingLeft()+(int)(thumbSize/2)+(int)(thumbStrokeSize*4),
-                /*thumbStrokeSize*4 (*4) is an abitrary number but it solved the tax thumbs stroke being clipped */
-                getPaddingTop()+(int)thumbSize/2,
-                trackBounds,
-                trackBounds);
+    private void initBounds(int width, int height){
+        int trackRadius = trackDrawable.getIntrinsicWidth()/2;
+
+        final int cX = width / 2;
+        final int cY= height / 2;
+
+
+        this.trackDrawable.setBounds(cX - trackRadius,
+                                     cY - trackRadius,
+                                     cX + trackRadius,
+                                     cY + trackRadius);
+
 
 
         this.drawStartPosX = trackDrawable.getBounds().centerX();
         this.drawStartPosY = trackDrawable.getBounds().centerY();
-        this.drawLengthPos = trackSize*0.5f + trackStrokeSize*0.5f;
+        this.drawLengthPos = this.trackSize *0.5f + trackStrokeSize*0.5f;
 
 
         final int tipLeft = (int)((polarX(drawStartPosX , drawLengthPos, tipFloor)) - thumbSize*0.5f);
@@ -433,9 +440,9 @@ public class TipView extends View implements Drawable.Callback {
         if(heightMode == MeasureSpec.EXACTLY){
             sizeH = height;
         } else {
-            sizeW = (int) (trackSize + (trackStrokeSize*2) + paddingHor + thumbPad+thumbStrokeSize*2);
+            sizeW = (int)(trackDrawable.getIntrinsicWidth() + paddingHor + thumbPad+thumbStrokeSize*2);
 
-            sizeH = (int) (trackSize + (trackStrokeSize*2) + paddingVer + thumbPad+thumbStrokeSize*2);
+            sizeH = (int)(trackDrawable.getIntrinsicHeight() + paddingVer + thumbPad+thumbStrokeSize*2);
         }
 
         setMeasuredDimension(sizeW, sizeH);
@@ -527,8 +534,6 @@ public class TipView extends View implements Drawable.Callback {
                 return theta;
         }
 
-
-
         return STATE_MOVEMENT_BREAK_BOUNDARIES;
     }
 
@@ -536,7 +541,6 @@ public class TipView extends View implements Drawable.Callback {
 
         float radianValue = theta - drawableForUpdate.getFloorRadians();
         float totalValue = (drawableForUpdate.getCielRadians() - drawableForUpdate.getFloorRadians());
-
 
 
         if(drawableForUpdate == taxDrawable) {
@@ -597,13 +601,9 @@ public class TipView extends View implements Drawable.Callback {
     }
 
 
-
-
     public void setOnValueChangedListener(OnValueChangedListener changedListener) {
         this.onValueChangedListener = changedListener;
     }
-
-
 
 
     /**

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="trackSize">175dp</dimen>
+    <dimen name="thumbSize">38dp</dimen>
+    <dimen name="strokeWidth">6dp</dimen>
+    <dimen name="tickmarkSize">4dp</dimen>
+    <dimen name="trackTextSize">26dp</dimen>
+</resources>

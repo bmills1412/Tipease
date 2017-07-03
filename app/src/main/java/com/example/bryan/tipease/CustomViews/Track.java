@@ -16,8 +16,12 @@ import android.graphics.drawable.Drawable;
 
     private Paint strokePaint, trackPaint;
 
+    private float trackSize;
+    private float strokeSize;
 
      Track(float trackSize ,float strokeSize, int circleColor, int strokeColor){
+         this.trackSize = trackSize;
+         this.strokeSize = strokeSize;
          this.radius = trackSize*0.5f;
 
          trackPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -47,7 +51,15 @@ import android.graphics.drawable.Drawable;
 
     }
 
+    @Override
+    public int getIntrinsicWidth() {
+        return (int)(trackSize + (strokeSize*2));
+    }
 
+    @Override
+    public int getIntrinsicHeight() {
+        return (int)(trackSize + (strokeSize*2));
+    }
 
     @Override
     public void setAlpha(int alpha) {

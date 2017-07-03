@@ -13,10 +13,6 @@ import android.text.TextPaint;
 import android.util.Log;
 
 
-/**
- * BaseClass for the drawables, that contains all of the drawables events
- */
-
 public class ThumbDrawableBase extends Drawable  {
 
 
@@ -82,13 +78,10 @@ public class ThumbDrawableBase extends Drawable  {
     }
 
 
-
-
     @Override
     public void draw(Canvas canvas) {
 
         float radius = (getBounds().right - getBounds().left) *0.5f;
-
 
         if(hasFocus){
             canvas.drawCircle(getBounds().centerX(), getBounds().centerY(), radius+strokePaint.getStrokeWidth(), strokePaint);
@@ -96,26 +89,18 @@ public class ThumbDrawableBase extends Drawable  {
 
         canvas.drawCircle(getBounds().centerX(), getBounds().centerY(), radius, thumbPaint);
 
-
         canvas.save();
         canvas.translate(getBounds().centerX() - (mTextLayout.getWidth()/2), getBounds().centerY() - mTextLayout.getHeight()/2);
         mTextLayout.draw(canvas);
         canvas.restore();
 
-
-
     }
-
-
-
 
 
     public void changeColor(boolean isDown){
         if(isDown) this.thumbPaint.setColor(attrTouchColor);
         else this.thumbPaint.setColor(attrThumbColor);
     }
-
-
 
 
     public void setFloorAndCiel(float floor, float ciel){
@@ -130,7 +115,6 @@ public class ThumbDrawableBase extends Drawable  {
     public float getCielRadians(){
         return cielRadians;
     }
-
 
 
     public void setFlagHasFocus(boolean hasFocus){
