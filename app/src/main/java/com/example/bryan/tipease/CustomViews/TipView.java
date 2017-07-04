@@ -116,11 +116,10 @@ public class TipView extends View implements Drawable.Callback {
 
     public TipView(Context context, AttributeSet set){
         this(context, set, R.attr.TipViewStyle);
-
     }
 
     public TipView(Context c, AttributeSet set, int styleDef){
-        this(c, set, styleDef, 0);
+        super(c, set, styleDef);
 
         TypedArray resArray = c.obtainStyledAttributes(set, R.styleable.TipView, styleDef, R.style.WidgetTipViewStyle);
         initView(resArray);
@@ -161,7 +160,6 @@ public class TipView extends View implements Drawable.Callback {
 
         int trackColor = 0;
         int trackStrokeColor = 0;
-
 
 
         CharSequence tipText = null;
@@ -440,9 +438,8 @@ public class TipView extends View implements Drawable.Callback {
         if(heightMode == MeasureSpec.EXACTLY){
             sizeH = height;
         } else {
-            sizeW = (int)(trackDrawable.getIntrinsicWidth() + paddingHor + thumbPad+thumbStrokeSize*2);
-
-            sizeH = (int)(trackDrawable.getIntrinsicHeight() + paddingVer + thumbPad+thumbStrokeSize*2);
+            sizeW = (int)(trackDrawable.getIntrinsicWidth() + paddingHor + thumbPad+thumbStrokeSize*4);
+            sizeH = (int)(trackDrawable.getIntrinsicHeight() + paddingVer + thumbPad+thumbStrokeSize*4);
         }
 
         setMeasuredDimension(sizeW, sizeH);

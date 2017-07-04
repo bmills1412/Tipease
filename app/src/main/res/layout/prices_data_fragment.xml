@@ -15,13 +15,7 @@
     android:columnCount="3"
     android:orientation="vertical"
 
-    android:paddingLeft="@dimen/gridPaddingHorizontal"
-    android:paddingStart="@dimen/gridPaddingHorizontal"
-    android:paddingRight="@dimen/gridPaddingHorizontal"
-    android:paddingEnd="@dimen/gridPaddingHorizontal"
-
-    android:paddingTop="@dimen/gridPaddingVertical"
-    android:paddingBottom="@dimen/gridPaddingVertical"
+    android:padding="@dimen/gridPadding"
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content">

@@ -40,11 +40,9 @@
         <item name="trackTextColor">@color/whiteColor</item>
 
 
-
+        <item name="android:layout_marginTop">@dimen/tipViewMarginVertical</item>
         <item name="android:padding">@dimen/tipViewPadding</item>
         <item name="android:layout_centerHorizontal">true</item>
-
-
     </style>
 
 
@@ -115,6 +113,8 @@
         <item name="android:scaleType">fitXY</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:layout_below">@id/tipView</item>
+        <item name="android:layout_margin">@dimen/breaker_bar_margin</item>
+
     </style>
 
 

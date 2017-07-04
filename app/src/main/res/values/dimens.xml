@@ -1,11 +1,11 @@
 <resources >
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="tipViewMarginVertical">10dp</dimen>
-    <dimen name="tipViewPadding">8dp</dimen>
+    <dimen name="tipViewPadding">5dp</dimen>
 
 
-    <dimen name="gridPaddingHorizontal">22dp</dimen>
-    <dimen name="gridPaddingVertical">22dp</dimen>
+    <dimen name="gridPadding">16dp</dimen>
+
 
     <dimen name="secondaryPricesDataPadding">6dp</dimen>
 
@@ -38,5 +38,7 @@
 
 
     <dimen name="toggle_compound_padding">6dp</dimen>
+    
+    <dimen name="breaker_bar_margin">16dp</dimen>
 
 </resources>
